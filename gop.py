@@ -96,7 +96,7 @@ print(f"{hong}┗━━━━━━━━━━━━━━━━━━━━━
 print(Colorate.Horizontal(Colors.red_to_purple, "=> Nhập [11] Nhây Tag Zalo Thu Hồi 🎄 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [12] Treo Ngôn Xanh Lá 👑 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_green, "=> Nhập [13] 10 Chức Năng Tool Mdung W Qhung 🎠 [ON]"))
-print(Colorate.Horizontal(Colors.green_to_red, "=> Nhập [14] Treo Ngon Của AESH 🩰 [ON]"))
+print(Colorate.Horizontal(Colors.green_to_red, "=> Nhập [14] Treo Ngôn Zalo Của AESH 🩰 [ON]"))
 print(Colorate.Horizontal(Colors.red_to_blue, "=> Nhập [15] Tool Treo Ngôn 5 Màu Của Huy Dzi 🎉 [ON]"))
 print(Colorate.Horizontal(Colors.red_to_purple, "=> Nhập [16] Tool 10 Chức Năng Của Nam & Huy Dzi ⚔️ [ON]"))
 
@@ -162,3 +162,4 @@ while True:
     except Exception as e:
         import traceback
         traceback.print_exc()
+
