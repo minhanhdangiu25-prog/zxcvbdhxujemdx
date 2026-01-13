@@ -69,7 +69,7 @@ class FacebookThreadExtractor:
             'Upgrade-Insecure-Requests': '1'
         }
 
-        sites = ['https://web.facebook.com', 'https://mbasic.facebook.com']
+        sites = ['https://www.facebook.com', 'https://mbasic.facebook.com']
 
         for site in sites:
             try:
@@ -144,8 +144,8 @@ class FacebookThreadExtractor:
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': '*/*',
             'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
-            'Origin': 'https://web.facebook.com',
-            'Referer': 'https://web.facebook.com/',
+            'Origin': 'https://www.facebook.com',
+            'Referer': 'https://www.facebook.com/',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
             'Sec-Fetch-Site': 'same-origin',
@@ -577,7 +577,7 @@ def parse_cookie_string(cookie_string):
             cookie_dict[key] = value
     return cookie_dict
 
-def Headers(setCookies, dataForm=None, Host="web.facebook.com"):
+def Headers(setCookies, dataForm=None, Host="www.facebook.com"):
     headers = {
         "Host": Host,
         "Connection": "keep-alive",
@@ -617,7 +617,7 @@ def dataGetHome(setCookies):
     except:
         dictValueSaved["FacebookID"] = "0"
 
-    response = requests.get("https://web.facebook.com", headers=headers)
+    response = requests.get("https://www.facebook.com", headers=headers)
     fb_dtsg_match = re.search(r'"token":"(.*?)"', response.text)
     if not fb_dtsg_match:
         fb_dtsg_match = re.search(r'name="fb_dtsg" value="(.*?)"', response.text)
@@ -658,7 +658,7 @@ def tenbox(newTitle, threadID, dataFB):
         }
 
         response = requests.post(
-            "https://web.facebook.com/messaging/set_thread_name/",
+            "https://www.facebook.com/messaging/set_thread_name/",
             data=form_data,
             headers=Headers(dataFB["cookieFacebook"], form_data),
             cookies=parse_cookie_string(dataFB["cookieFacebook"]),
@@ -849,7 +849,7 @@ def fetch_user_name(uid, cookie):
     form = {"ids[0]": uid, "fb_dtsg": fb_dtsg, "__a": a, "__req": req, "__rev": rev}
     headers = {'User-Agent': 'Mozilla/5.0', 'Cookie': cookie, 'Content-Type': 'application/x-www-form-urlencoded'}
     try:
-        r = requests.post("https://web.facebook.com/chat/user_info/", headers=headers, data=form, timeout=10)
+        r = requests.post("https://www.facebook.com/chat/user_info/", headers=headers, data=form, timeout=10)
         txt = r.text
         if txt.startswith("for (;;);"):
             txt = txt[9:]
@@ -896,7 +896,7 @@ def send_message_tag(cookie, thread_id, tag_uid, tag_name, body):
         'User-Agent': 'Mozilla/5.0',
         'Cookie': cookie,
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Referer': f'https://web.facebook.com/messages/t/{thread_id}'
+        'Referer': f'https://www.facebook.com/messages/t/{thread_id}'
     }
     try:
         r = requests.post("https://www.facebook.com/messaging/send/", data=payload, headers=headers, timeout=15)
