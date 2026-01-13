@@ -106,6 +106,8 @@ print(f"{hong}┗━━━━━━━━━━━━━━━━━━━━━
 
 print(Colorate.Horizontal(Colors.blue_to_cyan, "=> Nhập [17] Tool 7app Của Idol Trung Duc 🌭 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [18] Tool Get Token 18 Loại 🗿 [ON]"))
+print(Colorate.Horizontal(Colors.cyan_to_purple, "=> Nhập [19] Tool Gộp Của Idol Trong Tan 🌌 [ON]"))
+print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [20] Tool Nhây Tag Mess Thật Của Huy Dzi 🌈 [ON]"))
 
 while True:
     chon = input(f'{red}=>|{blue}MDUNG{luc}|=> Nhập Số Để Chạy Các Chức Năng: {vang}')
@@ -130,6 +132,8 @@ while True:
             "16": "https://raw.githubusercontent.com/minhanhdangiu25-prog/cxvbxcxzhhch/refs/heads/main/16.py",
             "17": "https://raw.githubusercontent.com/minhanhdangiu25-prog/cxvbxcxzhhch/refs/heads/main/17.py",
             "18": "https://raw.githubusercontent.com/minhanhdangiu25-prog/cxvbxcxzhhch/refs/heads/main/18.py",
+            "19": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/19.py",
+            "20": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/reo%20kh%20id.py",
         }
 
         if chon == "0":
