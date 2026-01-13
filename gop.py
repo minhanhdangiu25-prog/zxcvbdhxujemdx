@@ -109,8 +109,8 @@ print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [18] Tool Get Token 
 print(Colorate.Horizontal(Colors.red_to_green, "=> Nhập [19] Tool Gộp Của Idol Trong Tan 🌌 [ON]"))
 print(Colorate.Diagonal(Colors.DynamicMIX((Colors.orange, Colors.red)),'=> Nhập [20] Tool Nhây Tag Mess Thật Của Huy Dzi 🌈 [ON]'))
 print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [21] Tool 2 Chức Năng Mess By Mdung 🩻 [ON]'))
-print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [22] Tool Treo On Tài Khoản Facebook 🎍 [ON]'))
-print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [23] Tool Nuôi Tài Khoản Facebook 🎑 [ON]'))
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.blue)),'=> Nhập [22] Tool Treo On Tài Khoản Facebook 🎍 [ON]'))
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.cyan)),'=> Nhập [23] Tool Nuôi Tài Khoản Facebook 🎑 [ON]'))
 
 while True:
     chon = input(f'{red}=>|{blue}MDUNG{luc}|=> Nhập Số Để Chạy Các Chức Năng: {vang}')
