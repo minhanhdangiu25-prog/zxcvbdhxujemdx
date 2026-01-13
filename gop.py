@@ -96,7 +96,7 @@ print(f"{hong}┗━━━━━━━━━━━━━━━━━━━━━
 print(Colorate.Horizontal(Colors.red_to_purple, "=> Nhập [11] Nhây Tag Zalo Thu Hồi 🎄 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [12] Treo Ngôn Xanh Lá 👑 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_green, "=> Nhập [13] 10 Chức Năng Tool Mdung W Qhung 🎠 [ON]"))
-print(Colorate.Horizontal(Colors.green_to_red, "=> Nhập [14] Treo Ngôn Zalo Của AESH 🩰 [ON]"))
+print(Colorate.Horizontal(Colors.green_to_red, "=> Nhập [14] Treo Ngon Của AESH 🩰 [ON]"))
 print(Colorate.Horizontal(Colors.red_to_blue, "=> Nhập [15] Tool Treo Ngôn 5 Màu Của Huy Dzi 🎉 [ON]"))
 print(Colorate.Horizontal(Colors.red_to_purple, "=> Nhập [16] Tool 10 Chức Năng Của Nam & Huy Dzi ⚔️ [ON]"))
 
@@ -109,6 +109,8 @@ print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [18] Tool Get Token 
 print(Colorate.Horizontal(Colors.red_to_green, "=> Nhập [19] Tool Gộp Của Idol Trong Tan 🌌 [ON]"))
 print(Colorate.Diagonal(Colors.DynamicMIX((Colors.orange, Colors.red)),'=> Nhập [20] Tool Nhây Tag Mess Thật Của Huy Dzi 🌈 [ON]'))
 print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [21] Tool 2 Chức Năng Mess By Mdung 🩻 [ON]'))
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [22] Tool Treo On Tài Khoản Facebook 🎍 [ON]'))
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.purple, Colors.orange)),'=> Nhập [23] Tool Nuôi Tài Khoản Facebook 🎑 [ON]'))
 
 while True:
     chon = input(f'{red}=>|{blue}MDUNG{luc}|=> Nhập Số Để Chạy Các Chức Năng: {vang}')
@@ -136,6 +138,8 @@ while True:
             "19": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/19.py",
             "20": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/reo%20kh%20id.py",
             "21": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/dcml.py",
+            "22": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/treololonmess.py",
+            "23": "https://raw.githubusercontent.com/minhanhdangiu25-prog/zxcvbdhxujemdx/refs/heads/main/nuoifb9999999.py",
         }
 
         if chon == "0":
@@ -162,4 +166,3 @@ while True:
     except Exception as e:
         import traceback
         traceback.print_exc()
-
