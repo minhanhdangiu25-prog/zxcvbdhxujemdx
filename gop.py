@@ -106,8 +106,8 @@ print(f"{hong}┗━━━━━━━━━━━━━━━━━━━━━
 
 print(Colorate.Horizontal(Colors.blue_to_cyan, "=> Nhập [17] Tool 7app Của Idol Trung Duc 🌭 [ON]"))
 print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [18] Tool Get Token 18 Loại 🗿 [ON]"))
-print(Colorate.Horizontal(Colors.cyan_to_purple, "=> Nhập [19] Tool Gộp Của Idol Trong Tan 🌌 [ON]"))
-print(Colorate.Horizontal(Colors.blue_to_purple, "=> Nhập [20] Tool Nhây Tag Mess Thật Của Huy Dzi 🌈 [ON]"))
+print(Colorate.Horizontal(Colors.red_to_green, "=> Nhập [19] Tool Gộp Của Idol Trong Tan 🌌 [ON]"))
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.orange, Colors.red)),'=> Nhập [20] Tool Nhây Tag Mess Thật Của Huy Dzi 🌈 [ON]'))
 
 while True:
     chon = input(f'{red}=>|{blue}MDUNG{luc}|=> Nhập Số Để Chạy Các Chức Năng: {vang}')
