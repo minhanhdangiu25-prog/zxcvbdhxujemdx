@@ -12,6 +12,27 @@ from colorama import Fore, Style, init
 from datetime import datetime
 import sys
 import builtins
+import sys
+import subprocess
+
+REQUIRED_MODULES = [
+    "requests",
+    "pyfiglet",
+    "termcolor",
+    "colorama"
+]
+
+def install_and_import(pkg):
+    try:
+        __import__(pkg)
+    except ImportError:
+        print(f"[!] Thiếu module {pkg}, đang cài...")
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", pkg
+        ])
+
+for m in REQUIRED_MODULES:
+    install_and_import(m)
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -32,7 +53,7 @@ def print_colorful_box():
     out, i = "", 0
 
     for ch in text:
-        if ch.strip() != "":
+        if ch.strip() != "":web
             ratio = i / length
             r = int(start_rgb[0] + (end_rgb[0] - start_rgb[0]) * ratio)
             g = int(start_rgb[1] + (end_rgb[1] - start_rgb[1]) * ratio)
@@ -1264,7 +1285,7 @@ class Treoanhmess:
     def init_params(self):
         headers = {'Cookie': self.cookie, 'User-Agent': 'Mozilla/5.0'}
         try:
-            response = requests.get('https://web.facebook.com', headers=headers)
+            response = requests.get('https://www.facebook.com', headers=headers)
             fb_dtsg_match = re.search(r'"token":"(.*?)"', response.text)
             jazoest_match = re.search(r'name="jazoest" value="(\d+)"', response.text)
             if not fb_dtsg_match:
@@ -1292,7 +1313,7 @@ class Treoanhmess:
             print(f"[!] Lỗi tải ảnh: {e}")
             return None
 
-        headers = {'User-Agent': 'Mozilla/5.0', 'Origin': 'https://web.facebook.com', 'Referer': 'https://www.facebook.com/'}
+        headers = {'User-Agent': 'Mozilla/5.0', 'Origin': 'https://www.facebook.com', 'Referer': 'https://www.facebook.com/'}
         params = {'__user': self.user_id, 'fb_dtsg': self.fb_dtsg, '__a': '1', '__req': 'z', '__comet_req': '15'}
         cookies = {k.strip(): v for k, v in (x.split('=') for x in self.cookie.split(';') if '=' in x)}
 
@@ -1300,7 +1321,7 @@ class Treoanhmess:
         try:
             with open(filename, 'rb') as img_file:
                 files = {'upload_1024': (filename, img_file, 'image/jpeg')}
-                res = requests.post('https://web.facebook.com/ajax/mercury/upload.php',
+                res = requests.post('https://www.facebook.com/ajax/mercury/upload.php',
                                     headers=headers, params=params, cookies=cookies, files=files)
             if res.status_code == 200:
                 json_text = res.text.replace('for (;;);', '')
@@ -1356,8 +1377,8 @@ class Treoanhmess:
         headers = {
             'User-Agent': 'Mozilla/5.0',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Origin': 'https://web.facebook.com',
-            'Referer': f'https://web.facebook.com/messages/t/{recipient_id}'
+            'Origin': 'https://www.facebook.com',
+            'Referer': f'https://www.facebook.com/messages/t/{recipient_id}'
         }
         cookies = {k.strip(): v for k, v in (x.split('=') for x in self.cookie.split(';') if '=' in x)}
 
